@@ -1,0 +1,70 @@
+a {
+  color: red;
+}
+
+.home__page {
+  background-image: url("https://shopping-cart-demo2.vercel.app/customer/view/img/bg.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.home__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home__content .link__item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.home__content .link__item .link__img {
+  background: rgb(211, 215, 216);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 60px;
+  transition: all 0.5s;
+}
+.home__content .link__item .link__img:hover {
+  transform: translateY(-10px);
+}
+.home__content .link__item .link__img img {
+  max-width: 100%;
+  height: 200px;
+}
+.home__content .link__item .link__title {
+  padding-top: 20px;
+  font-size: 40px;
+  color: rgb(204, 204, 204);
+  font-family: "Times New Roman", Times, serif;
+  transition: all 0.5s;
+  position: relative;
+}
+.home__content .link__item .link__title::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s;
+}
+.home__content .link__item .link__title:hover {
+  color: red;
+}
+.home__content .link__item .link__title:hover::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: red;
+  position: absolute;
+  bottom: 0;
+}/*# sourceMappingURL=style.css.map */
