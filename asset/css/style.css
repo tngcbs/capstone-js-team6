@@ -1,5 +1,6 @@
 a {
   color: red;
+  text-decoration: none;
 }
 
 .home__page {
@@ -50,13 +51,6 @@ a {
   transition: all 0.5s;
   position: relative;
 }
-.home__content .link__item .link__title::before {
-  content: "";
-  width: 0;
-  position: absolute;
-  bottom: 0;
-  transition: all 0.3s;
-}
 .home__content .link__item .link__title:hover {
   color: red;
 }
@@ -67,4 +61,52 @@ a {
   background: red;
   position: absolute;
   bottom: 0;
+}
+.home__content .link__item::before {
+  content: "";
+  width: 10px;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar a, .navbar i {
+  color: #fff;
+  padding: 10px 0;
+  font-size: 22px;
+}
+.navbar .navbar-collapse {
+  padding: 10px 0;
+  justify-content: space-between;
+}
+.navbar .navbar-collapse .nav2 {
+  justify-content: flex-end;
+}
+.navbar .navbar-collapse .nav-link {
+  color: #fff;
+}
+
+.phoneBanner {
+  background-color: rgba(29, 38, 113, 0.7);
+  margin: 150px 0;
+}
+.phoneBanner .btn-banner {
+  border: 0;
+  background-color: #294d5c;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  transition: all 0.15s;
+}
+.phoneBanner .btn-banner:hover {
+  background-color: #fff;
+  color: #212529;
+}
+.product__list {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

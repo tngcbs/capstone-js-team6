@@ -5,6 +5,7 @@ $white : #fff;
 a
 {
   color: red;
+  text-decoration: none;
 }
 .home__page
 {
@@ -61,14 +62,7 @@ a
       font-family: 'Times New Roman', Times, serif;
       transition: all .5s;
       position: relative;
-      &::before
-        {
-          content: '';
-          width: 0;
-          position: absolute;
-          bottom: 0;
-          transition: all .3s;
-        }
+      
       &:hover
       {
         color:red;
@@ -85,5 +79,61 @@ a
       }
       
     } 
+    &::before
+        {
+          content: '';
+          width: 10px;
+          position: absolute;
+          bottom: 0;
+          transition: all .3s;
+        }
   }  
+}
+.navbar
+{
+  background: rgb(0 0 0 / 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & a,i{
+    color: $white;
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  & .navbar-collapse
+  {
+    padding: 10px 0;
+    justify-content: space-between;
+    & .nav2
+    {
+      justify-content: flex-end;
+    }
+    & .nav-link
+    {
+      color: $white;
+    } 
+  }
+}
+.phoneBanner
+{
+  background-color: rgba(29, 38, 113, 0.7);
+  margin: 150px 0;
+  & .btn-banner
+  {
+    border: 0;
+    background-color: #294d5c;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 10px;
+    transition: all 0.15s; 
+    &:hover
+    {
+        background-color: $white;
+        color: #212529;
+      }
+  }
+   
+}
+.product__list
+{
+  display: flex;
 }
