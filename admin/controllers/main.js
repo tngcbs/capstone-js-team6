@@ -6,7 +6,7 @@ const getProductList = () => {
   onLoading();
   const promise = axios({
     method: "GET",
-    url: "https://6500588718c34dee0cd4bf43.mockapi.io/products",
+    url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
   });
 
   promise
@@ -71,7 +71,7 @@ getElm("#btnAddPhone").onclick = () => {
   onLoading();
   const products = getInfor();
   const promise = axios({
-    url: "https://6500588718c34dee0cd4bf43.mockapi.io/products",
+    url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
     method: "POST",
     data: products,
   });
@@ -97,7 +97,7 @@ window.editProduct = (id) => {
   getElm("#btnAddPhone").style.display = "none";
   getElm("#btnUpdate").style.display = "inline-block";
   const promise = axios({
-    url: `https://6500588718c34dee0cd4bf43.mockapi.io/products/${id}`,
+    url: `https://650aaf0ddfd73d1fab08b325.mockapi.io/products/${id}`,
     method: "GET",
   });
   promise
@@ -124,7 +124,7 @@ getElm("#btnUpdate").onclick = () => {
   let products = getInfor();
   let id = getElm("#btnUpdate").getAttribute("data-id");
   const promise = axios({
-    url: `https://6500588718c34dee0cd4bf43.mockapi.io/products/${id}`,
+    url: `https://650aaf0ddfd73d1fab08b325.mockapi.io/products/${id}`,
     method: "PUT",
     data: products,
   });
@@ -144,7 +144,7 @@ getElm("#btnUpdate").onclick = () => {
 window.delProduct = (id) => {
   onLoading();
   const promise = axios({
-    url: `https://6500588718c34dee0cd4bf43.mockapi.io/products/${id}`,
+    url: `https://650aaf0ddfd73d1fab08b325.mockapi.io/products/${id}`,
     method: "DELETE",
   });
   promise

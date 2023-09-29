@@ -1,6 +1,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+body a {
+  text-decoration: none;
+}
 body header .navbar {
   border-bottom: 1px solid #919294;
 }
