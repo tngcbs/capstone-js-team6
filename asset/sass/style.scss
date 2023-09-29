@@ -118,30 +118,68 @@ a {
   }
 }
 
-.navbar {
-  background: rgb(0 0 0 / 80%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// navbar
 
-  & a,
-  i {
-    color: $white;
-    padding: 10px 0;
-    font-size: 22px;
+header {
+  .navbar {
+      border-bottom: 1px solid $color-dark-1;
+
+      .header-main {
+          padding: 10px 50px 10px 50px;
+
+          &__logo {
+              text-decoration: none;
+              color: $color-white;
+              font-weight: 600;
+              font-size: 22px;
+              letter-spacing: .8rem;
+
+              img {
+                  max-width: 50px;
+                  max-height: auto;
+              }
+          }
+
+          &__btn {
+              background-color: $color-white;
+          }
+
+          &__menu {
+              margin-left: 80px;
+
+              .header-main__item {
+                  color: $color-white;
+                  font-size: 14px;
+                  font-weight: 600;
+                  letter-spacing: .1rem;
+                  margin-right: 30px;
+              }
+          }
+
+          &__icon {
+              a {
+                  i {
+                      text-decoration: none;
+                      color: $color-white;
+                      font-size: 1.5rem;
+                  }
+              }
+
+
+          }
+      }
   }
 
-  & .navbar-collapse {
-    padding: 10px 0;
-    justify-content: space-between;
+  .carousel {
+      &-item {
+          img {
+              max-width: auto;
+              // max-height: 100vh;
+              margin-top: 50px;
+          }
+      }
 
-    & .nav2 {
-      justify-content: flex-end;
-    }
 
-    & .nav-link {
-      color: $white;
-    }
   }
 }
 

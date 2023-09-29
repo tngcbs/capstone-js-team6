@@ -65,6 +65,17 @@ const getInfor = () => {
   );
 };
 
+const resetForm = () => {
+  getElm("#name").value = "";
+  getElm("#price").value = "";
+  getElm("#screen").value = "";
+  getElm("#backCam").value = "";
+  getElm("#frontCam").value = "";
+  getElm("#img").value = "";
+  getElm("#desc").value = "";
+  getElm("#type").value = "";
+};
+
 //add Product
 
 getElm("#btnAddPhone").onclick = () => {
@@ -88,6 +99,7 @@ getElm("#btnAddPhone").onclick = () => {
 };
 
 getElm("#addPhoneForm").onclick = () => {
+  resetForm();
   getElm("#btnAddPhone").style.display = "inline-block";
   getElm("#btnUpdate").style.display = "none";
 };

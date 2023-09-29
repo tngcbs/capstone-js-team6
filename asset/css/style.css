@@ -114,29 +114,6 @@ a {
   transition: all 0.3s;
 }
 
-.navbar {
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.navbar a,
-.navbar i {
-  color: #fff;
-  padding: 10px 0;
-  font-size: 22px;
-}
-.navbar .navbar-collapse {
-  padding: 10px 0;
-  justify-content: space-between;
-}
-.navbar .navbar-collapse .nav2 {
-  justify-content: flex-end;
-}
-.navbar .navbar-collapse .nav-link {
-  color: #fff;
-}
-
 .phoneBanner {
   background-color: rgba(29, 38, 113, 0.7);
   margin: 150px 0;
