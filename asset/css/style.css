@@ -121,7 +121,8 @@ a {
   justify-content: center;
   align-items: center;
 }
-.navbar a, .navbar i {
+.navbar a,
+.navbar i {
   color: #fff;
   padding: 10px 0;
   font-size: 22px;
@@ -156,18 +157,17 @@ a {
 .product__list {
   display: flex;
 }
-
-#exampleModal h3 {
+.product__list #exampleModal h3 {
   text-align: center;
   padding: 20px 0 0;
 }
-#exampleModal .form-group {
+.product__list #exampleModal .form-group {
   padding: 5px 0;
 }
-#exampleModal .input-group-prepend {
+.product__list #exampleModal .input-group-prepend {
   width: 40px;
   height: 40px;
 }
-#exampleModal .input-group-prepend .input-group-text {
+.product__list #exampleModal .input-group-prepend .input-group-text {
   padding: 0.7rem 0.75rem;
 }/*# sourceMappingURL=style.css.map */
