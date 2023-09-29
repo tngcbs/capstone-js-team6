@@ -2,6 +2,41 @@ $width : 50%;
 $height : 200px;
 $fs_title : 40px;
 $white : #fff;
+
+
+// loading
+.loading {
+  display: none;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  span {
+    display: inline-block;
+    margin: 0 -.05em;
+  }
+}
+.loading03 {
+  span {
+	margin: 0 -.075em;
+    animation: loading03 .7s infinite alternate;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i+1}) {
+        animation-delay: #{$i*.1}s;
+      }
+    }
+  }
+}
+@keyframes loading03 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
+}
 a
 {
   color: red;
@@ -136,4 +171,24 @@ a
 .product__list
 {
   display: flex;
+}
+#exampleModal
+{
+  & h3
+  {
+    text-align: center;
+    padding: 20px 0 0;
+  }
+  & .form-group {
+    padding: 5px 0;
+}
+  & .input-group-prepend
+  {
+    width: 40px;
+    height: 40px;
+    & .input-group-text {
+      padding: 0.7rem 0.75rem;
+  }
+  }
+  
 }

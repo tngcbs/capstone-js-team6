@@ -1,3 +1,48 @@
+.loading {
+  display: none;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.loading span {
+  display: inline-block;
+  margin: 0 -0.05em;
+}
+
+.loading03 span {
+  margin: 0 -0.075em;
+  animation: loading03 0.7s infinite alternate;
+}
+.loading03 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loading03 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loading03 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.loading03 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.loading03 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.loading03 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+@keyframes loading03 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
 a {
   color: red;
   text-decoration: none;
@@ -107,6 +152,22 @@ a {
   background-color: #fff;
   color: #212529;
 }
+
 .product__list {
   display: flex;
+}
+
+#exampleModal h3 {
+  text-align: center;
+  padding: 20px 0 0;
+}
+#exampleModal .form-group {
+  padding: 5px 0;
+}
+#exampleModal .input-group-prepend {
+  width: 40px;
+  height: 40px;
+}
+#exampleModal .input-group-prepend .input-group-text {
+  padding: 0.7rem 0.75rem;
 }/*# sourceMappingURL=style.css.map */
