@@ -1,0 +1,19 @@
+// Import Abstracts
+
+@import 'Abstracts/variables';
+
+// Import Bases
+
+@import 'Bases/loading';
+
+// Import Layouts
+
+@import 'Layouts/footer';
+@import 'Layouts/header';
+
+// Import Pages
+
+@import 'Pages/admin';
+@import 'Pages/home';
+@import 'Pages/store';
+
