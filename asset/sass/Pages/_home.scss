@@ -1,0 +1,79 @@
+@import '../Abstracts/variables';
+.home__page {
+    background-image: url('https://shopping-cart-demo2.vercel.app/customer/view/img/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+  
+  }
+  
+  .home__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    & .link__item {
+      & a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+      }
+  
+      & .link__img {
+        background: rgb(211, 215, 216);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 60px;
+        transition: all .5s;
+  
+        &:hover {
+          transform: translateY(-10px);
+        }
+  
+        & img {
+          max-width: 100%;
+          height: 300px;
+        }
+      }
+  
+      & .link__title {
+        padding-top: 20px;
+        font-size: $fs_title;
+        color: rgb(204, 204, 204);
+        font-family: 'Times New Roman', Times, serif;
+        transition: all .5s;
+        position: relative;
+  
+        &:hover {
+          color: red;
+  
+          &::before {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background: red;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+  
+      }
+  
+      &::before {
+        content: '';
+        width: 10px;
+        position: absolute;
+        bottom: 0;
+        transition: all .3s;
+      }
+    }
+  }
