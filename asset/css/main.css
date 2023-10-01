@@ -1,3 +1,10 @@
+body {
+  font-family: "Poppins", sans-serif, sans-serif;
+}
+body a {
+  text-decoration: none;
+}
+
 .loading {
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
@@ -42,6 +49,21 @@
     transform: scale(0.8);
   }
 }
+#exampleModal h3 {
+  text-align: center;
+  padding: 20px 0 0;
+}
+#exampleModal .form-group {
+  padding: 5px 0;
+}
+#exampleModal .input-group-prepend {
+  width: 40px;
+  height: 40px;
+}
+#exampleModal .input-group-prepend .input-group-text {
+  padding: 0.7rem 0.75rem;
+}
+
 header .navbar {
   border-bottom: 1px solid #919294;
 }
@@ -76,40 +98,6 @@ header .navbar .header-main__icon a i {
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
-}
-
-.phoneBanner {
-  background-color: rgba(29, 38, 113, 0.7);
-}
-.phoneBanner .btn-banner {
-  border: 0;
-  background-color: #294d5c;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 10px;
-  transition: all 0.15s;
-}
-.phoneBanner .btn-banner:hover {
-  background-color: #fff;
-  color: #212529;
-}
-
-.product__list {
-  display: flex;
-}
-
-#exampleModal h3 {
-  text-align: center;
-  padding: 20px 0 0;
-}
-#exampleModal .form-group {
-  padding: 5px 0;
-}
-#exampleModal .input-group-prepend {
-  width: 40px;
-  height: 40px;
-}
-#exampleModal .input-group-prepend .input-group-text {
-  padding: 0.7rem 0.75rem;
 }
 
 .home__page {
@@ -177,6 +165,25 @@ header .navbar .header-main__icon a i {
   position: absolute;
   bottom: 0;
   transition: all 0.3s;
+}
+
+.phoneBanner {
+  background-color: rgba(29, 38, 113, 0.7);
+}
+.phoneBanner .btn-banner {
+  border: 0;
+  background-color: #294d5c;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  transition: all 0.15s;
+}
+.phoneBanner .btn-banner:hover {
+  background-color: #fff;
+  color: #212529;
+}
+
+.product__list {
+  display: flex;
 }
 
 .carousel-item img {

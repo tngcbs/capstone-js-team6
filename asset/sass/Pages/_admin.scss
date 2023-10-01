@@ -18,25 +18,3 @@
 .product__list {
     display: flex;
 }
-#exampleModal
-{
-    & h3
-    {
-        text-align  : center;
-        padding: 20px 0 0;
-    }
-
-    & .form-group {
-        padding: 5px 0;
-    }
-
-    & .input-group-prepend
-    {
-        width: 40px;
-        height: 40px;
-
-        & .input-group-text {
-            padding : 0.7rem 0.75rem;
-        }
-    }
-}
