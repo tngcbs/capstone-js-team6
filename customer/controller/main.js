@@ -16,10 +16,14 @@ const filterProductByType = () => {
     getProductList()
         .then((res) => {
             let productList = res.data;
-            let result = productList.filter((product) => {
-                return product.type.includes(value);
-            });
-            renderProductList(result);
+            if (value === '') {
+                renderProductList(res.data);
+            } else {
+                let result = productList.filter((product) => {
+                    return product.type.includes(value);
+                });
+                renderProductList(result);
+            }
         })
         .catch((err) => {
             console.log('filterProductByType Error: ', err);
