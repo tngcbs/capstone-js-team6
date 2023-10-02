@@ -13,10 +13,9 @@
   
   <body>
 
-
     <header>
       <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-fluid header-main">
+            <div class="container header-main">
                 <a class="header-main__logo" href="#">
                     <img src="../../asset/img/logo.png" alt="Logo">
                     <span>CELLPHONE STORE</span>
@@ -33,7 +32,7 @@
                                 href="../../index.html">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link header-main__item" href="../../customer/views/store.html">STORE</a>
+                            <a class="nav-link header-main__item" href="../../customer/view/store.html">STORE</a>
                         </li>
                     </ul>
                     <div class="d-flex header-main__icon">
@@ -169,7 +168,7 @@
                         <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
                       </div>
                       <select class="form-control" name="chucvu" id="type">
-                        <option selected="" disabled="">Select brand</option>
+                        <option selected="" disabled="" value="">Select brand</option>
                         <option>Apple</option>
                         <option>Samsung</option>
                       </select>
@@ -321,4 +320,6 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- <script src="../models/products.js"></script> -->
     <script type="module" src="../controllers/main.js"></script>
+    <script  type="module" src="../util/validation.js"></script>
+
       </script></body></html>

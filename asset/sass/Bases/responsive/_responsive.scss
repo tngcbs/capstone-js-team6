@@ -1,0 +1,20 @@
+// Mobile
+
+
+//HEADER
+@media screen and (max-width: 548px)
+{
+    header {
+        & .header-main
+        {
+            &__logo
+            {
+                span
+                {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}

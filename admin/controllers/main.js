@@ -1,4 +1,5 @@
 import products from "../models/products.js";
+import checkEmp from "../util/validation.js";
 // get Element
 const getElm = (elm) => document.querySelector(elm);
 const getProductList = () => {
@@ -76,19 +77,38 @@ const resetForm = () => {
 
 getElm("#btnAddPhone").onclick = () => {
   const products = getInfor();
-  const promise = axios({
-    url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
-    method: "POST",
-    data: products,
-  });
-  promise
-    .then(() => {
-      getElm("#btnClose").click();
-      getProductList();
-    })
-    .catch((err) => {
-      console.log("err: ", err);
+  let check =
+    checkEmp(products.name, "#tbname", "Tên không được để trống") &
+    checkEmp(products.price, "#tbprice", "Giá không được để trống") &
+    checkEmp(products.screen, "#tbscreen", "Màn hình không được để trống") &
+    checkEmp(
+      products.backCamera,
+      "#tbbackCam",
+      "Camera sau không được để trống"
+    ) &
+    checkEmp(
+      products.frontCamera,
+      "#tbfrontCam",
+      "Camera trước không được để trống"
+    ) &
+    checkEmp(products.img, "#tbimg", "Link hình ảnh không được để trống") &
+    checkEmp(products.desc, "#tbdesc", "Thông tin không được để trống") &
+    checkEmp(products.type, "#tbtype", "Loại sản phẩm không được để trống");
+  if (check) {
+    const promise = axios({
+      url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
+      method: "POST",
+      data: products,
     });
+    promise
+      .then(() => {
+        getElm("#btnClose").click();
+        getProductList();
+      })
+      .catch((err) => {
+        console.log("err: ", err);
+      });
+  }
 };
 
 getElm("#addPhoneForm").onclick = () => {
@@ -125,20 +145,40 @@ window.editProduct = (id) => {
 //Update
 getElm("#btnUpdate").onclick = () => {
   let products = getInfor();
-  let id = getElm("#btnUpdate").getAttribute("data-id");
-  const promise = axios({
-    url: `https://650aaf0ddfd73d1fab08b325.mockapi.io/products/${id}`,
-    method: "PUT",
-    data: products,
-  });
-  promise
-    .then(() => {
-      getProductList();
-      getElm("#btnClose").click();
-    })
-    .catch((err) => {
-      console.log("err: ", err);
+  let check =
+    checkEmp(products.name, "#tbname", "Tên không được để trống") &
+    checkEmp(products.price, "#tbprice", "Giá không được để trống") &
+    checkEmp(products.screen, "#tbscreen", "Màn hình không được để trống") &
+    checkEmp(
+      products.backCamera,
+      "#tbbackCam",
+      "Camera sau không được để trống"
+    ) &
+    checkEmp(
+      products.frontCamera,
+      "#tbfrontCam",
+      "Camera trước không được để trống"
+    ) &
+    checkEmp(products.img, "#tbimg", "Link hình ảnh không được để trống") &
+    checkEmp(products.desc, "#tbdesc", "Thông tin không được để trống") &
+    checkEmp(products.type, "#tbtype", "Loại sản phẩm không được để trống");
+
+  if (check) {
+    let id = getElm("#btnUpdate").getAttribute("data-id");
+    const promise = axios({
+      url: `https://650aaf0ddfd73d1fab08b325.mockapi.io/products/${id}`,
+      method: "PUT",
+      data: products,
     });
+    promise
+      .then(() => {
+        getProductList();
+        getElm("#btnClose").click();
+      })
+      .catch((err) => {
+        console.log("err: ", err);
+      });
+  }
 };
 
 // DELETE PRODUCT

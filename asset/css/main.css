@@ -5,6 +5,10 @@ body a {
   text-decoration: none;
 }
 
+.sp-thongbao {
+  color: red;
+}
+
 .loading {
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
@@ -49,6 +53,11 @@ body a {
     transform: scale(0.8);
   }
 }
+@media screen and (max-width: 548px) {
+  header .header-main__logo span {
+    display: none;
+  }
+}
 #exampleModal h3 {
   text-align: center;
   padding: 20px 0 0;
@@ -68,10 +77,9 @@ header .navbar {
   border-bottom: 1px solid #919294;
 }
 header .navbar .header-main {
-  padding: 10px 50px 10px 50px;
+  padding: 10px 0;
 }
 header .navbar .header-main__logo {
-  text-decoration: none;
   color: #fff;
   font-weight: 600;
   font-size: 22px;
@@ -79,7 +87,6 @@ header .navbar .header-main__logo {
 }
 header .navbar .header-main__logo img {
   max-width: 50px;
-  max-height: auto;
 }
 header .navbar .header-main__btn {
   background-color: #fff;
