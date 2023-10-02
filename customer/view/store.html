@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../../asset/sass/css/store.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
 </head>
 
 <body>
@@ -84,8 +84,8 @@
                 </div>
 
                 <div class="product-items">
-                    <div class="row align-items-center text-center">
-                        <div class="product-items__detail col-lg-3 col-md-6 col-sm-12">
+                    <div class="row align-items-center text-center" id="productList">
+                        <!-- <div class="product-items__detail col-lg-3 col-md-6 col-sm-12">
                             <div class="card">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2 text-muted">New</h6>
@@ -140,7 +140,7 @@
                                     <a href="#" class="btn btn-primary">Buy</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -307,6 +307,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+
+    <!-- Axios JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+        integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Products JS -->
+    <script src="../model/Products.js"></script>
+
+    <!-- Product Servie JS -->
+    <script src="../service/productService.js"></script>
+
+    <!-- Products Controller -->
+    <script src="../controller/productController.js"></script>
+
+    <!-- Main JS -->
+    <script src="../controller/main.js"></script>
 </body>
 
 </html>
