@@ -1,9 +1,7 @@
 import products from "../models/products.js";
 // get Element
 const getElm = (elm) => document.querySelector(elm);
-
 const getProductList = () => {
-  onLoading();
   const promise = axios({
     method: "GET",
     url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
@@ -12,11 +10,9 @@ const getProductList = () => {
   promise
     .then((result) => {
       renderTable(result.data);
-      offLoading();
     })
     .catch((err) => {
       console.log(err);
-      offLoading();
     });
 };
 getProductList();
@@ -31,7 +27,7 @@ const renderTable = (productList) => {
             <td>${product.price}</td>
             <td><img src='${product.img}' width="50px"/></td>
             <td>${product.desc}</td>
-            <td>
+            <td align="center">
               <button data-bs-toggle="modal" data-bs-target="#exampleModal"
               class="btn btn-warning"
                onclick="editProduct(${product.id})">Sửa</button>
@@ -65,10 +61,20 @@ const getInfor = () => {
   );
 };
 
+const resetForm = () => {
+  getElm("#name").value = "";
+  getElm("#price").value = "";
+  getElm("#screen").value = "";
+  getElm("#backCam").value = "";
+  getElm("#frontCam").value = "";
+  getElm("#img").value = "";
+  getElm("#desc").value = "";
+  getElm("#type").value = "";
+};
+
 //add Product
 
 getElm("#btnAddPhone").onclick = () => {
-  onLoading();
   const products = getInfor();
   const promise = axios({
     url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
@@ -79,15 +85,14 @@ getElm("#btnAddPhone").onclick = () => {
     .then(() => {
       getElm("#btnClose").click();
       getProductList();
-      offLoading();
     })
     .catch((err) => {
-      offLoading();
       console.log("err: ", err);
     });
 };
 
 getElm("#addPhoneForm").onclick = () => {
+  resetForm();
   getElm("#btnAddPhone").style.display = "inline-block";
   getElm("#btnUpdate").style.display = "none";
 };
@@ -112,7 +117,6 @@ window.editProduct = (id) => {
       getElm("#img").value = products.img;
       getElm("#desc").value = products.desc;
       getElm("#type").value = products.type;
-      console.log("products.type: ", products.type);
     })
     .catch((err) => {
       console.log("err: ", err);
@@ -120,7 +124,6 @@ window.editProduct = (id) => {
 };
 //Update
 getElm("#btnUpdate").onclick = () => {
-  onLoading();
   let products = getInfor();
   let id = getElm("#btnUpdate").getAttribute("data-id");
   const promise = axios({
@@ -130,35 +133,31 @@ getElm("#btnUpdate").onclick = () => {
   });
   promise
     .then(() => {
-      offLoading();
       getProductList();
       getElm("#btnClose").click();
     })
     .catch((err) => {
-      offLoading();
       console.log("err: ", err);
     });
 };
 
 // DELETE PRODUCT
 window.delProduct = (id) => {
-  onLoading();
   const promise = axios({
     url: `https://650aaf0ddfd73d1fab08b325.mockapi.io/products/${id}`,
     method: "DELETE",
   });
   promise
     .then(() => {
-      offLoading();
       getProductList();
     })
     .catch((err) => {
-      offLoading();
       console.log("err: ", err);
     });
 };
-function onLoading() {
-  getElm("#tablePhone").innerHTML = `
+const onLoading = (positionID) => {
+  getElm("#formPhone").style.display = "none";
+  getElm(positionID).innerHTML = `
         <div class="loading loading03" id="loadingAnimation">
           <span>L</span>
           <span>O</span>
@@ -169,9 +168,8 @@ function onLoading() {
           <span>G</span>
         </div>
   `;
-  getElm("#loadingAnimation").style.display = "block";
-}
+};
 
-function offLoading() {
-  getElm("#loadingAnimation").style.display = "none";
-}
+const offLoading = () => {
+  getElm(".loading").style.display = "none";
+};

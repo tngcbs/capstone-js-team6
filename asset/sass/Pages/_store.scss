@@ -1,0 +1,76 @@
+.carousel {
+    &-item {
+        img {
+            max-width: auto;
+            // max-height: 100vh;
+            margin-top: 50px;
+        }
+    }
+}
+
+.banner {
+    &-detail {
+        h5 {
+            color: $color-white;
+            font-weight: 400;
+        }
+
+        p {
+            color: $color-white;
+            font-weight: 300;
+        }
+    }
+
+    &-image {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    }
+}
+
+.product-list {
+    .product-title {
+        h5 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: .5rem;
+        }
+    }
+
+    .product-items {
+        &__detail {
+            .card {
+                border-radius: 1.2rem;
+
+                .card-subtitle {
+                    font-size: 15px;
+                    color: $color-red-1 !important;
+                }
+
+                .card-text {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.brand-list {
+    margin-bottom: 50px;
+
+    .brand-item {
+        width: 130px;
+        height: 40px;
+        border: 1px solid $color-black;
+        border-radius: .3rem;
+        margin: 5px 10px 5px 10px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    }
+}

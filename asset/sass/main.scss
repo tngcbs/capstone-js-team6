@@ -1,0 +1,29 @@
+// Import Abstracts
+
+@import 'Abstracts/variables';
+
+//BODY
+body {
+    font-family: $font-family, sans-serif;
+    a{text-decoration: none;}
+  }
+
+// Import Bases
+
+@import 'Bases/loading';
+
+// Import Components
+
+@import 'Components/modals/modal';
+
+// Import Layouts
+
+@import 'Layouts/footer';
+@import 'Layouts/header';
+
+// Import Pages
+
+@import 'Pages/home';
+@import 'Pages/admin';
+@import 'Pages/store';
+
