@@ -1,5 +1,7 @@
 const getElement = (selector) => document.querySelector(selector);
 
+const getElementAll = (selector) => document.querySelectorAll(selector);
+
 const renderProductList = (productList) => {
     let stringHTML = '';
 
@@ -24,3 +26,4 @@ const renderProductList = (productList) => {
 
     getElement("#productList").innerHTML = stringHTML;
 };
+

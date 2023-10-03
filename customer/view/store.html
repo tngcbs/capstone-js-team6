@@ -83,105 +83,26 @@
                     <h5 class="mb-5">HOT PRODUCTS</h5>
                 </div>
 
+<<<<<<< HEAD
+=======
+                <div class="row">
+                    <div class="col-2">
+                        <select id="typeSelect" class="form-select" aria-label="Default select example"
+                            onchange="filterProductByType()">
+                            <option selected value="">Select Brand</option>
+                            <option value="Apple">Apple</option>
+                            <option value="Samsung">Samsung</option>
+                        </select>
+                    </div>
+                </div>
+
+>>>>>>> dev2
                 <div class="product-items">
                     <div class="row align-items-center text-center" id="productList">
-                        <!-- <div class="product-items__detail col-lg-3 col-md-6 col-sm-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-subtitle mb-2 text-muted">New</h6>
-                                    <h5 class="card-title">iPhone 15 Pro Max</h5>
-                                </div>
-                                <img src="../../asset/img/iphone-card-40-iphone15prohero-202309.jpeg"
-                                    class="card-img-top" alt="iPhone 15 Pro Max">
-                                <div class="card-body">
-                                    <span class="card-text">From $999</span>
-                                    <a href="#" class="btn btn-primary">Buy</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-items__detail col-lg-3 col-md-6 col-sm-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-subtitle mb-2 text-muted">New</h6>
-                                    <h5 class="card-title">iPhone 15 Pro Max</h5>
-                                </div>
-                                <img src="../../asset/img/iphone-card-40-iphone15prohero-202309.jpeg"
-                                    class="card-img-top" alt="iPhone 15 Pro Max">
-                                <div class="card-body">
-                                    <span class="card-text">From $999</span>
-                                    <a href="#" class="btn btn-primary">Buy</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-items__detail col-lg-3 col-md-6 col-sm-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-subtitle mb-2 text-muted">New</h6>
-                                    <h5 class="card-title">iPhone 15 Pro Max</h5>
-                                </div>
-                                <img src="../../asset/img/iphone-card-40-iphone15prohero-202309.jpeg"
-                                    class="card-img-top" alt="iPhone 15 Pro Max">
-                                <div class="card-body">
-                                    <span class="card-text">From $999</span>
-                                    <a href="#" class="btn btn-primary">Buy</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-items__detail col-lg-3 col-md-6 col-sm-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-subtitle mb-2 text-muted">New</h6>
-                                    <h5 class="card-title">iPhone 15 Pro Max</h5>
-                                </div>
-                                <img src="../../asset/img/iphone-card-40-iphone15prohero-202309.jpeg"
-                                    class="card-img-top" alt="iPhone 15 Pro Max">
-                                <div class="card-body">
-                                    <span class="card-text">From $999</span>
-                                    <a href="#" class="btn btn-primary">Buy</a>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="container">
-            <div class="brand-list">
-                <div class="row align-items-center text-center gx-5">
-                    <div class="brand-item col-lg-2 col-md-4 col-sm-6">
-                        <a href="#">
-                            <img src="../../asset/img/apple.png" alt="Apple Brand">
-                        </a>
-                    </div>
-                    <div class="brand-item col-lg-2 col-md-4 col-sm-6">
-                        <a href="#">
-                            <img src="../../asset/img/samsung.png" alt="Samsung Brand">
-                        </a>
-                    </div>
-                    <div class="brand-item col-lg-2 col-md-4 col-sm-6">
-                        <a href="#">
-                            <img src="../../asset/img/xiaomi.png" alt="Xiaomi Brand">
-                        </a>
-                    </div>
-                    <div class="brand-item col-lg-2 col-md-4 col-sm-6">
-                        <a href="#">
-                            <img src="../../asset/img/oppo.png" alt="Oppo Brand">
-                        </a>
-                    </div>
-                    <div class="brand-item col-lg-2 col-md-4 col-sm-6">
-                        <a href="#">
-                            <img src="../../asset/img/nokia.png" alt="Nokia Brand">
-                        </a>
-                    </div>
-                    <div class="brand-item col-lg-2 col-md-4 col-sm-6">
-                        <a href="#">
-                            <img src="../../asset/img/vivo.png" alt="Vivo Brand">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </main>
 
 
@@ -314,7 +235,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Products JS -->
-    <script src="../model/Products.js"></script>
+    <script src="../model/Product.js"></script>
+
+    <!-- Cart JS -->
+    <script src="../model/Cart.js"></script>
+
+    <!-- Cart Item JS -->
+    <script src="../model/CartItem.js"></script>
 
     <!-- Product Servie JS -->
     <script src="../service/productService.js"></script>
