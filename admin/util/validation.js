@@ -1,5 +1,5 @@
 window.checkEmp = (value, idErr, message) => {
-  if (value === "") {
+  if (value.trim() === "") {
     document.querySelector(idErr).style.display = "block";
     document.querySelector(idErr).innerHTML = message;
     return false;

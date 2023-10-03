@@ -72,7 +72,16 @@ const resetForm = () => {
   getElm("#desc").value = "";
   getElm("#type").value = "";
 };
-
+const clearErrorSpans = () => {
+  getElm("#tbname").textContent = "";
+  getElm("#tbprice").textContent = "";
+  getElm("#tbscreen").textContent = "";
+  getElm("#tbbackCam").textContent = "";
+  getElm("#tbfrontCam").textContent = "";
+  getElm("#tbimg").textContent = "";
+  getElm("#tbdesc").textContent = "";
+  getElm("#tbtype").textContent = "";
+};
 //add Product
 
 getElm("#btnAddPhone").onclick = () => {
@@ -119,6 +128,7 @@ getElm("#addPhoneForm").onclick = () => {
 
 //edit Product
 window.editProduct = (id) => {
+  clearErrorSpans();
   getElm("#btnAddPhone").style.display = "none";
   getElm("#btnUpdate").style.display = "inline-block";
   const promise = axios({
@@ -195,21 +205,49 @@ window.delProduct = (id) => {
       console.log("err: ", err);
     });
 };
-const onLoading = (positionID) => {
-  getElm("#formPhone").style.display = "none";
-  getElm(positionID).innerHTML = `
-        <div class="loading loading03" id="loadingAnimation">
-          <span>L</span>
-          <span>O</span>
-          <span>A</span>
-          <span>D</span>
-          <span>I</span>
-          <span>N</span>
-          <span>G</span>
-        </div>
-  `;
+
+window.filterProductByPrice = () => {
+  let selectedValue = getElm("#priceSelect").value;
+  const promise = axios({
+    method: "GET",
+    url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
+  });
+
+  promise
+    .then((result) => {
+      let dataSort = result.data.sort((a, b) => {
+        return selectedValue === "increase"
+          ? a.price - b.price
+          : b.price - a.price;
+      });
+      renderTable(dataSort);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
-const offLoading = () => {
-  getElm(".loading").style.display = "none";
+window.searchName = () => {
+  var name = document.querySelector("#keyWorld").value.trim()?.toLowerCase();
+
+  const promise = axios({
+    method: "GET",
+    url: "https://650aaf0ddfd73d1fab08b325.mockapi.io/products",
+  });
+
+  promise
+    .then(function (res) {
+      //tìm kiếm tên người dùng nhập
+      const result = res.data.filter((obj) => {
+        return obj.name.toLowerCase().includes(name);
+      });
+      console.log("result.length: ", result.length);
+
+      result.length === 0
+        ? (getElm("#tablePhone").innerHTML = `Không tìm thấy sản phẩm`)
+        : renderTable(result);
+    })
+    .catch(function (err) {
+      console.log("err", err);
+    });
 };
