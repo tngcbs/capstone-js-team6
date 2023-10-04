@@ -17,7 +17,7 @@ const renderProductList = (productList) => {
                 class="card-img-top" alt="${product.name}">
             <div class="card-body">
                 <span class="card-text">From $ ${product.price}</span>
-                <a href="#" class="btn btn-primary">Buy</a>
+                <a href="#" class="btn btn-primary" onclick="addProductToCart(${product.id})">Buy</a>
             </div>
         </div>
     </div>   

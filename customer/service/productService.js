@@ -6,3 +6,10 @@ const getProductList = () => {
         method: 'GET'
     })
 };
+
+const getProductById = (id) => {
+    return axios({
+        url: `${BASE_URL}/${id}`,
+        method: 'GET'
+    })
+};

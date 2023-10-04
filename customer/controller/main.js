@@ -29,3 +29,13 @@ const filterProductByType = () => {
             console.log('filterProductByType Error: ', err);
         });
 };
+
+const addProductToCart = (id) => {
+    getProductById(id)
+        .then((res) => {
+
+        })
+        .catch((err) => {
+            console.log('addProductToCart Error: ', err);
+        })
+};
