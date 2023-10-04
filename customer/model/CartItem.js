@@ -1,6 +1,6 @@
 class CartItem {
     constructor(_product, _quantity) {
-        this.product = product;
-        this.quantity = quantity;
+        this.product = _product;
+        this.quantity = _quantity;
     }
 }

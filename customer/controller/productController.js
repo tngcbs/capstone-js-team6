@@ -26,4 +26,3 @@ const renderProductList = (productList) => {
 
     getElement("#productList").innerHTML = stringHTML;
 };
-

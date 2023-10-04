@@ -30,12 +30,19 @@ const filterProductByType = () => {
         });
 };
 
+const cart = new Cart();
+
 const addProductToCart = (id) => {
     getProductById(id)
         .then((res) => {
+            const product = res.data;
+            const quantity = 1;
+            const cartItem = new CartItem(product, quantity);
 
+            cart.addProduct(cartItem);
+            console.log(cart);
         })
         .catch((err) => {
             console.log('addProductToCart Error: ', err);
-        })
+        });
 };
