@@ -49,9 +49,30 @@
                         </li>
                     </ul>
                     <div class="d-flex header-main__icon">
-                        <a href="">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#cartModal">
                             <i class="fa fa-shopping-cart"></i>
-                        </a>
+                        </button>
+
+                        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary btnClear"
+                                            data-bs-dismiss="modal">Clear</button>
+                                        <button type="button" class="btn btnPurchase">Purchase</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

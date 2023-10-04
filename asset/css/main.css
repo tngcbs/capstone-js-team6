@@ -6,6 +6,7 @@ body a {
 }
 
 .sp-thongbao {
+  display: none;
   color: red;
 }
 
@@ -101,10 +102,13 @@ header .navbar .header-main__menu .header-main__item {
   letter-spacing: 0.1rem;
   margin-right: 30px;
 }
-header .navbar .header-main__icon a i {
+header .navbar .header-main__icon button i {
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
+}
+header .navbar .header-main__icon .modal-footer .btnPurchase {
+  background-color: #fd7e14;
 }
 
 .home__page {
