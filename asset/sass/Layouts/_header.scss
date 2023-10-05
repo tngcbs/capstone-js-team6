@@ -41,6 +41,11 @@ header {
                     }
                 }
 
+                .modal-dialog-custom {
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+
                 .modal-footer {
                     .btnPurchase {
                         background-color: $color-orange-1;

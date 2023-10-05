@@ -24,5 +24,23 @@ const renderProductList = (productList) => {
         `;
     });
 
-    getElement("#productList").innerHTML = stringHTML;
+    getElement('#productList').innerHTML = stringHTML;
 };
+
+const renderCart = (cart) => {
+    let stringHTML = '';
+    let number = 0;
+
+    cart.forEach((cartItem) => {
+        stringHTML += `
+        <tr>
+            <th scope="row">${number++}</th>
+                <td>${cartItem.product.name}</td>
+                <td>${cartItem.quantity}</td>
+                <td>${cartItem.product.price}</td></td>
+                <td>${cartItem.product.price * cartItem.quantity}</td>
+        </tr>
+        `;
+    });
+    getElement('#cartItemList').innerHTML = stringHTML;
+}

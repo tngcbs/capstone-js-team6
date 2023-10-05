@@ -40,7 +40,7 @@ const addProductToCart = (id) => {
             const cartItem = new CartItem(product, quantity);
 
             cart.addProduct(cartItem);
-            console.log(cart);
+            renderCart(cart);
         })
         .catch((err) => {
             console.log('addProductToCart Error: ', err);
