@@ -31,16 +31,16 @@ const filterProductByType = () => {
 };
 
 const cart = new Cart();
+console.log(cart);
 
 const addProductToCart = (id) => {
     getProductById(id)
         .then((res) => {
-            const product = res.data;
-            const quantity = 1;
-            const cartItem = new CartItem(product, quantity);
-
-            cart.addProduct(cartItem);
-            renderCart(cart);
+            let product = res.data;
+            let quantity = 1;
+            //let cartItem = new CartItem(product, quantity);
+            cart.addProduct(product, quantity);
+            renderCart(cart.cartItems);
         })
         .catch((err) => {
             console.log('addProductToCart Error: ', err);
