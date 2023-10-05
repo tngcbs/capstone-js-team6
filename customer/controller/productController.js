@@ -29,7 +29,7 @@ const renderProductList = (productList) => {
 
 const renderCart = (cart) => {
     let stringHTML = '';
-    let number = 0;
+    let number = 1;
 
     cart.forEach((cartItem) => {
         stringHTML += `
